@@ -19,11 +19,11 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = "11"
-        targetCompatibility = "11"
+        sourceCompatibility = "17"
+        targetCompatibility = "17"
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
     buildFeatures {
         viewBinding = true
@@ -34,5 +34,5 @@ android {
 dependencies {
     implementation project(":app")
 
-    kapt 'com.google.dagger:dagger-compiler:2.46.1'
+    kapt 'com.google.dagger:dagger-compiler:2.51.1'
 }

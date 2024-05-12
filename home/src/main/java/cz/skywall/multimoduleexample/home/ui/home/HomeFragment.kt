@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import cz.skywal.mutimoduleexmaple.dummy_service.DummyService
 import cz.skywall.multimoduleexample.home.R
 import cz.skywall.multimoduleexample.common.R as CR
@@ -15,7 +16,6 @@ import cz.skywall.multimoduleexample.home.base.BaseFragment
 import cz.skywall.multimoduleexample.home.data.repository.DummyRepository
 import cz.skywall.multimoduleexample.home.data.repository.HomeDummyRepository
 import cz.skywall.multimoduleexample.network.ApiService
-import kotlinx.android.synthetic.main.fragment_home.*
 import javax.inject.Inject
 
 class HomeFragment : BaseFragment(), HomeView {
@@ -49,7 +49,7 @@ class HomeFragment : BaseFragment(), HomeView {
         homeAdapter.toString()
         apiService.toString()
 
-        combined_text.text =
+        view.findViewById<TextView>(R.id.combined_text).text =
             """Combined: 
                 ${resources.getString(CR.string.string_from_common)}
                 ${resources.getString(AR.string.string_from_app)}

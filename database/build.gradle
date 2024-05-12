@@ -33,5 +33,5 @@ android {
 }
 
 dependencies {
-    kapt 'com.google.dagger:dagger-compiler:2.46.1'
+    kapt 'com.google.dagger:dagger-compiler:2.51.1'
 }

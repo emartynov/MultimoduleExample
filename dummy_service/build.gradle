@@ -18,10 +18,19 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_17
+    }
 }
 
 dependencies {
     implementation project(":core")
 
-    kapt 'com.google.dagger:dagger-compiler:2.46.1'
+    kapt 'com.google.dagger:dagger-compiler:2.51.1'
 }
