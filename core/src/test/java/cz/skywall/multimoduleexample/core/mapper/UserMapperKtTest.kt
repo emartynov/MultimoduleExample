@@ -7,9 +7,13 @@ import cz.skywall.multimoduleexample.database.UserDBKotlinFixtures
 class UserMapperKtTest {
     @Test
     fun `Some test`() {
-// java test fixture
+        // java test fixture
         val user = UserDBJavaFixtures.defaultUser
-// kotlin test fixture
+
+        // kotlin test fixture
         val kotlinUser = UserDBKotlinFixtures.defaultUser
+
+        // kotlin test fixture that uses internal
+        val calculated = UserDBKotlinFixtures.calculateSome() + UserDBKotlinFixtures.useInternal()
     }
 }
